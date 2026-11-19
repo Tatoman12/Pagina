@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>José Reyes · Tatoman12</title>
+  <meta name="description" content="Portafolio de José Reyes (Tatoman12): proyectos de desarrollo, herramientas de escritorio y experimentos web.">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="José Reyes · Tatoman12">
+  <meta property="og:description" content="Portafolio de José Reyes (Tatoman12): proyectos de desarrollo, herramientas de escritorio y experimentos web.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/173102365?v=4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Aplica el tema guardado antes de pintar para evitar parpadeos.
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = stored || system;
+      } catch (e) { /* sin acceso a localStorage */ }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">JR</span>
+        <span class="brand-text">josé reyes</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#stack">Stack</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"></circle>
+          <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"></path>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1Z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero wrap" id="inicio">
+      <div class="hero-copy">
+        <p class="pill"><span class="dot" aria-hidden="true"></span>Abierto a colaborar</p>
+
+        <h1>
+          Hola, soy
+          <span class="gradient">José Reyes</span>
+        </h1>
+
+        <p class="lead">
+          Desarrollador autodidacta. Construyo aplicaciones de escritorio, herramientas web y
+          pequeños experimentos que resuelven problemas reales — como un descargador de mods
+          para la Workshop de Steam.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos">
+            Ver proyectos
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/Tatoman12" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg>
+            GitHub
+          </a>
+        </div>
+
+        <ul class="hero-meta" aria-label="Tecnologías principales">
+          <li>Python</li>
+          <li>VB.NET</li>
+          <li>JavaScript</li>
+          <li>HTML &amp; CSS</li>
+        </ul>
+      </div>
+
+      <aside class="terminal" aria-label="Ficha rápida">
+        <div class="terminal-bar">
+          <span class="terminal-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="terminal-title">perfil.sh</span>
+        </div>
+        <div class="terminal-body">
+          <div class="term-row">
+            <span class="prompt">$</span>
+            <span class="cmd">whoami</span>
+          </div>
+          <p class="term-out with-avatar">
+            <img class="avatar" src="https://avatars.githubusercontent.com/u/173102365?v=4"
+                 alt="Foto de perfil de José Reyes" width="56" height="56" loading="lazy" decoding="async">
+            <span>josé reyes <span class="muted">· @Tatoman12</span></span>
+          </p>
+
+          <div class="term-row">
+            <span class="prompt">$</span>
+            <span class="cmd">stack --principal</span>
+          </div>
+          <p class="term-out muted">python · vb.net · javascript</p>
+
+          <div class="term-row">
+            <span class="prompt">$</span>
+            <span class="cmd">estado</span>
+          </div>
+          <p class="term-out muted">aprendiendo y construyendo</p>
+
+          <div class="term-row">
+            <span class="prompt">$</span>
+            <span class="caret" aria-hidden="true"></span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="section wrap" id="sobre-mi">
+      <div class="section-head">
+        <p class="eyebrow">01 — Sobre mí</p>
+        <h2>Curiosidad, código y cosas que funcionan</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Me gusta entender cómo funcionan las cosas por dentro y convertirlas en herramientas
+            útiles. La mayoría de lo que sé lo he aprendido practicando: montando proyectos de
+            principio a fin, rompiéndolos y volviéndolos a arreglar.
+          </p>
+          <p>
+            Suelo moverme entre el desarrollo de escritorio y la web, con especial cariño por las
+            interfaces limpias y las apps que resuelven una tarea concreta sin estorbar.
+          </p>
+        </div>
+
+        <ul class="facts">
+          <li>
+            <span class="fact-k">Enfoque</span>
+            <span class="fact-v">Herramientas prácticas de escritorio y web</span>
+          </li>
+          <li>
+            <span class="fact-k">Aprendizaje</span>
+            <span class="fact-v">Autodidacta, proyecto a proyecto</span>
+          </li>
+          <li>
+            <span class="fact-k">En GitHub desde</span>
+            <span class="fact-v">2024</span>
+          </li>
+          <li>
+            <span class="fact-k">Idiomas</span>
+            <span class="fact-v">Español · Inglés</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="section wrap" id="proyectos">
+      <div class="section-head">
+        <p class="eyebrow">02 — Proyectos</p>
+        <h2>Cosas que he construido</h2>
+      </div>
+
+      <div class="projects">
+        <article class="card">
+          <div class="card-top">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"></path><circle cx="19" cy="16.5" r="2.5"></circle></svg>
+            </span>
+            <a class="card-link" href="https://github.com/Tatoman12/Steam_Workshop_Downloader" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Steam Workshop Downloader">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+            </a>
+          </div>
+          <h3>Steam Workshop Downloader</h3>
+          <p>
+            App web local, en una sola ventana, para descargar mods de la Workshop de Steam.
+            Incluye explorador de mods, historial de descargas e inicio de sesión con QR.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>HTML</li><li>SteamKit2</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"></rect><path d="M8.5 7h7M8.5 11h2M13.5 11h2M8.5 15h2M13.5 15h2"></path></svg>
+            </span>
+            <a class="card-link" href="https://github.com/Tatoman12/Calculadora" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Calculadora">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+            </a>
+          </div>
+          <h3>Calculadora</h3>
+          <p>
+            Calculadora de escritorio con interfaz nativa en Visual Basic .NET. Un proyecto
+            clásico para practicar lógica, eventos y diseño de formularios.
+          </p>
+          <ul class="tags">
+            <li>Visual Basic .NET</li><li>Escritorio</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M13.5 5l-3 14"></path></svg>
+            </span>
+            <a class="card-link" href="https://github.com/Tatoman12/Ejercicios-programacion" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Ejercicios de programación">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+            </a>
+          </div>
+          <h3>Ejercicios de programación</h3>
+          <p>
+            Colección de ejercicios y prácticas en Python: fundamentos, estructuras de datos,
+            algoritmos y pequeños retos resueltos paso a paso.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>Algoritmos</li><li>Prácticas</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3.5 20 8v8l-8 4.5L4 16V8l8-4.5Z"></path><path d="M12 12 4 8M12 12l8-4M12 12v8.5"></path></svg>
+            </span>
+            <a class="card-link" href="https://github.com/Tatoman12/Sisifo" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Sísifo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+            </a>
+          </div>
+          <h3>Sísifo</h3>
+          <p>
+            Proyecto personal en desarrollo. Un espacio de experimentación donde pruebo ideas,
+            mecánicas y código antes de darles forma definitiva.
+          </p>
+          <ul class="tags">
+            <li>Experimental</li><li>En progreso</li>
+          </ul>
+        </article>
+      </div>
+
+      <a class="all-repos" href="https://github.com/Tatoman12?tab=repositories" target="_blank" rel="noopener noreferrer">
+        Ver todos los repositorios en GitHub
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </section>
+
+    <!-- STACK -->
+    <section class="section wrap" id="stack">
+      <div class="section-head">
+        <p class="eyebrow">03 — Stack</p>
+        <h2>Con qué trabajo</h2>
+      </div>
+
+      <div class="stack-grid">
+        <div class="stack-group">
+          <h3>Lenguajes</h3>
+          <ul class="chips">
+            <li>Python</li>
+            <li>Visual Basic .NET</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Batch</li>
+          </ul>
+        </div>
+
+        <div class="stack-group">
+          <h3>Herramientas</h3>
+          <ul class="chips">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Visual Studio Code</li>
+            <li>Windows</li>
+          </ul>
+        </div>
+
+        <div class="stack-group">
+          <h3>Me interesa</h3>
+          <ul class="chips">
+            <li>Interfaces limpias</li>
+            <li>Automatización</li>
+            <li>Apps de escritorio</li>
+            <li>Web ligera</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section wrap" id="contacto">
+      <div class="contact-card">
+        <p class="eyebrow">04 — Contacto</p>
+        <h2>¿Hablamos?</h2>
+        <p class="contact-lead">
+          Si tienes una idea, una duda o quieres colaborar en algo, escríbeme. Respondo en cuanto
+          puedo.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:josetrabajo201802@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg>
+            Enviar un correo
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/Tatoman12" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg>
+            @Tatoman12
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> José Reyes · Tatoman12</p>
+      <p class="muted">Hecho a mano con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

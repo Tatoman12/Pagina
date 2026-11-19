@@ -1,0 +1,17 @@
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Entornos
+.venv/
+venv/
+node_modules/
+
+# Logs
+*.log
